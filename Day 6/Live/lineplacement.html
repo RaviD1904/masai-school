@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="basic.css" />
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 100px);
+
+        gap: 20px 40px;
+      }
+
+      .container > div {
+        font-size: 30px;
+        color: #ffeead;
+        text-align: center;
+      }
+
+      body {
+        background-color: #ffeead;
+        margin: 10px;
+      }
+
+      .a {
+        background-color: #be0fa1;
+
+        /* grid-area: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
+
+        grid-area: 2/3/3/4;
+      }
+
+      .b {
+        background-color: #88d8b0;
+        /* grid-row-start: 2;
+        grid-column-start: 2;
+        grid-row-end: 3;
+        grid-column-end: 3; */
+
+        grid-area:2/2/3/3
+      }
+
+      .c {
+        background-color: #ff6f69;
+      }
+
+      .d {
+        background-color: #8d887d;
+        /* grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+        grid-column-end: 2; */
+
+        grid-area:1/1/2/2
+      }
+      .e {
+        background-color: #17422d;
+      }
+
+      .f {
+        background-color: #5f2321;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+      <div class="e">E</div>
+      <div class="f">F</div>
+    </div>
+  </body>
+</html>

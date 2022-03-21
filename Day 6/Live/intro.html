@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="basic.css" />
+    <style>
+      .container {
+        display: grid;
+        /* you need to specify rows and cols */
+        /* 6 divs - 2 cols -> 3 rows
+        6 divs - 3cols -> 2 rows */
+        /* repeat(no of times you want to repeat, size) */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 100px);
+        /* grid-row-gap: 20px;
+        grid-column-gap: 20px; */
+
+        gap:20px 40px;
+      }
+
+      .container > div {
+        font-size: 30px;
+        color: #ffeead;
+        text-align: center;
+        /* Never use height and width prop */
+      }
+
+      body {
+        background-color: #ffeead;
+        margin: 10px;
+      }
+
+      .a {
+        background-color: #be0fa1;
+      }
+
+      .b {
+        background-color: #88d8b0;
+      }
+
+      .c {
+        background-color: #ff6f69;
+      }
+
+      .d {
+        background-color: #ffcc5c;
+      }
+      .e {
+        background-color: #17422d;
+      }
+
+      .f {
+        background-color: #5f2321;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+      <div class="e">E</div>
+      <div class="f">F</div>
+    </div>
+  </body>
+</html>

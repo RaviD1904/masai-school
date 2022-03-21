@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="a" placeholder="Enter A">
+    <input type="number" name="" id="b" placeholder="Enter B">
+    <button>Product</button>
+    <button id="expo">Click here to find the exponent</button>
+    <p id="para"></p>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click",product)
+    
+    function product(){
+        var a=document.querySelector("#a").value
+        var b=document.querySelector("#b").value
+        alert(eval(a*b))
+    }
+    document.querySelector("#expo").addEventListener("click",expo)
+    
+    function expo(){
+        var a=document.querySelector("#a").value
+        var b=document.querySelector("#b").value
+        var c=1
+        for(var i=0;i<b;i++){
+            c=c*a
+        }
+        
+        document.querySelector("#para").innerHTML=c
+    }
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            
+        }
+        #container > div{
+            margin-left: 45px;
+        }
+        #stro{
+            margin-top: 1px 1px 1px 1px;
+        padding: 1px 1px 1px 1px;        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+var parentbox=document.createElement("div")
+parentbox.setAttribute("id","container")
+
+
+data.map(function (ele){
+    var div1 = document.createElement("div");
+    div1.setAttribute("class","box")
+    var img=document.createElement("img")
+    img.setAttribute("src",ele.imgUrl)
+    var name=document.createElement("h3")
+    name.textContent=ele.name
+    name.style.color="gray"
+    var price=document.createElement("h3")
+    price.textContent=ele.price
+    price.style.fontWeight="bold"
+    var strprice=document.createElement("h4")
+    strprice.textContent=ele.strikedOffPrice
+    strprice.style.textDecorationLine="line-through"
+    strprice.setAttribute("id","stro")
+    div1.append(img,name,price,strprice)
+    parentbox.append(div1)
+    document.querySelector("body").append(parentbox)
+})
+
+
+
+
+
+</script>
