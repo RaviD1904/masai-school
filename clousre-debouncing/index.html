@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+
+        }
+        img{
+            width: 156px;
+            height: 88px;
+        }
+        #movies{
+            /* border: 1px solid black;
+            height: 200px;
+            width: 300px;
+            border-top: none;
+            overflow: scroll; */
+            width: 360px;
+             height: auto;
+             /* overflow: hidden;
+            position: absolute; */
+            background: #0c111b;
+            /* padding: 8px; */
+            border-radius: 6px;
+            border: 1px solid #192133;
+            /* display: none; */
+        }
+        p{
+            padding:2%;
+            color: white;
+        }
+        .box {
+            /* padding:2%; */
+            
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            height: 88px;
+            width: 100%;
+            margin: 0 0 8px 0;
+            background-color:#192133;       
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="main">
+        <button onclick="trending()">Trending Movies</button>
+        <input oninput="debounce(main,1000)" type="query" id="query">
+        <div id="movies"></div>
+    </div>
+    <div id="movie"></div>
+</body>
+</html>
+<script src="/index.js"></script>
