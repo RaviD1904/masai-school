@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <form action="">
+      
+        <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="password" required />
+     
+      <button id="submit">Login</button>
+    </form>
+  </body>
+</html>
+
+
+
+
+<script type="module">
+
+    import navbar from './componenets/navbar.js'
+    document.getElementById("navbar").innerHTML=navbar()
+  
+    async function login(){
+        // e.preventDefault()
+        let user_data={
+           username:document.getElementById("username").value,
+           password:document.getElementById("password").value
+          }
+        console.log(user_data);
+        user_data=JSON.stringify(user_data)
+        let res= await fetch('https://masai-api-mocker.herokuapp.com/auth/login',{
+            method:'POST',
+            body:user_data,
+            ///mode:"no-cors",//if error come put the this
+            headers:{
+                "Content-Type":"application/json", ///C & T captial
+            },
+          })
+        
+        let data=await res.json()
+        console.log(data);
+        let username=document.getElementById("username").value
+        getUserDetail(username,data.token);
+
+      };
+    document.getElementById("submit").addEventListener('click',login)
+    let getUserDetail = async (username, token) => {
+      console.log("here");
+    let res = await fetch(
+      `https://masai-api-mocker.herokuapp.com/user/${username}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    let data = await res.json();
+    alert("login sucess")
+    console.log("user data: ", data);
+  };
+  </script>
+  

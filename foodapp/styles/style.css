@@ -1,0 +1,46 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid blue;
+}
+
+#meal{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+
+}
+#meal >div{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#meal >div>img{
+    margin-top: 5px;
+    width: 300px;
+    height: 250px;
+}
+#rec{
+    width: 20%;
+    margin: auto;
+    height: 30px;
+    font-size: 19px;
+    margin: 41px 17px 41px 556px;
+}
+#rod{
+    display: flex;
+    gap: 20px;
+    
+}
+#rod>div:nth-child(1){
+    text-align: center;
+}
+#rod >div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+}
+#rod >div:nth-child(2)>p{
+    font-size: 26px;
+}
