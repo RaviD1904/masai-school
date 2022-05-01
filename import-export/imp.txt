@@ -1,0 +1,7 @@
+
+api authitication of login url
+url=https://github.com/masai-school/api-mocker/wiki/Authentication-API
+
+
+Api url
+url=https://masai-api-mocker.herokuapp.com/auth/register
